@@ -1,0 +1,163 @@
+$date
+	Fri Jan 19 00:25:30 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module tb_comparator_1bit $end
+$var wire 1 ! AeqB $end
+$var wire 1 " AgtB $end
+$var wire 1 # AltB $end
+$var reg 1 $ A $end
+$var reg 1 % AeqB_LSB $end
+$var reg 1 & AgtB_LSB $end
+$var reg 1 ' AltB_LSB $end
+$var reg 1 ( B $end
+$scope module uut $end
+$var wire 1 ) A $end
+$var wire 1 * AeqB_LSB $end
+$var wire 1 + AeqB_temp $end
+$var wire 1 , AgtB_LSB $end
+$var wire 1 - AltB_LSB $end
+$var wire 1 . B $end
+$var reg 1 / AeqB $end
+$var reg 1 0 AgtB $end
+$var reg 1 1 AltB $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+11
+00
+0/
+x.
+0-
+0,
+x+
+1*
+x)
+x(
+0'
+0&
+1%
+x$
+1#
+0"
+0!
+$end
+#2000
+01
+0#
+1/
+1!
+1+
+0(
+0.
+0$
+0)
+#4000
+0/
+0!
+11
+1#
+0+
+1(
+1.
+#6000
+01
+0#
+10
+1"
+0(
+0.
+1$
+1)
+#8000
+1/
+1!
+1+
+00
+0"
+01
+0#
+1(
+1.
+#10000
+0/
+0!
+10
+1"
+1&
+1,
+0%
+0*
+#12000
+0(
+0.
+0$
+0)
+#14000
+00
+0"
+11
+1#
+0+
+1(
+1.
+#16000
+01
+0#
+10
+1"
+0(
+0.
+1$
+1)
+#18000
+1+
+10
+1"
+01
+0#
+1(
+1.
+#20000
+00
+0"
+11
+1#
+1'
+1-
+0&
+0,
+#22000
+0(
+0.
+0$
+0)
+#24000
+0+
+1(
+1.
+#26000
+01
+0#
+10
+1"
+0(
+0.
+1$
+1)
+#28000
+1+
+00
+0"
+11
+1#
+1(
+1.
+#30000

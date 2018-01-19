@@ -1,0 +1,131 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x2165f80 .scope module, "tb_df_comparator_8b" "tb_df_comparator_8b" 2 3;
+ .timescale -9 -11;
+v0x2190680_0 .var "A", 7 0;
+v0x2190970_0 .net "AeqB", 0 0, L_0x21922e0; 1 drivers
+v0x21909f0_0 .net "AgtB", 0 0, L_0x2192710; 1 drivers
+v0x2190aa0_0 .net "AltB", 0 0, L_0x2192a90; 1 drivers
+v0x2190b80_0 .var "B", 7 0;
+v0x2190c30_0 .var "s", 0 0;
+S_0x2165350 .scope module, "uut" "df_comparator_8b" 2 9, 2 37, S_0x2165f80;
+ .timescale -9 -11;
+L_0x218f2a0 .functor BUFZ 8, v0x2190680_0, C4<00000000>, C4<00000000>, C4<00000000>;
+L_0x2190ce0 .functor BUFZ 8, v0x2190b80_0, C4<00000000>, C4<00000000>, C4<00000000>;
+L_0x2191cf0 .functor AND 1, v0x2190c30_0, L_0x2191970, C4<1>, C4<1>;
+L_0x2191bf0 .functor NOT 1, v0x2190c30_0, C4<0>, C4<0>, C4<0>;
+L_0x21921e0 .functor AND 1, L_0x2191bf0, L_0x2190ee0, C4<1>, C4<1>;
+L_0x21922e0 .functor OR 1, L_0x2191cf0, L_0x21921e0, C4<0>, C4<0>;
+L_0x2192470 .functor AND 1, v0x2190c30_0, L_0x2191c50, C4<1>, C4<1>;
+L_0x2192560 .functor NOT 1, v0x2190c30_0, C4<0>, C4<0>, C4<0>;
+L_0x2192610 .functor AND 1, L_0x2192560, L_0x21912e0, C4<1>, C4<1>;
+L_0x2192710 .functor OR 1, L_0x2192470, L_0x2192610, C4<0>, C4<0>;
+L_0x21928c0 .functor AND 1, v0x2190c30_0, L_0x2191fe0, C4<1>, C4<1>;
+L_0x2192920 .functor NOT 1, v0x2190c30_0, C4<0>, C4<0>, C4<0>;
+L_0x2192860 .functor AND 1, L_0x2192920, L_0x2191590, C4<1>, C4<1>;
+L_0x2192a90 .functor OR 1, L_0x21928c0, L_0x2192860, C4<0>, C4<0>;
+v0x214fc80_0 .net "A", 7 0, v0x2190680_0; 1 drivers
+v0x218ec80_0 .net/s "A_s", 7 0, L_0x218f2a0; 1 drivers
+v0x218ed20_0 .alias "AeqB", 0 0, v0x2190970_0;
+v0x218edc0_0 .alias "AgtB", 0 0, v0x21909f0_0;
+v0x218ee70_0 .alias "AltB", 0 0, v0x2190aa0_0;
+v0x218ef10_0 .net "B", 7 0, v0x2190b80_0; 1 drivers
+v0x218eff0_0 .net/s "B_s", 7 0, L_0x2190ce0; 1 drivers
+v0x218f090_0 .net *"_s12", 0 0, L_0x2191070; 1 drivers
+v0x218f180_0 .net *"_s14", 0 0, C4<1>; 1 drivers
+v0x218f220_0 .net *"_s16", 0 0, C4<0>; 1 drivers
+v0x218f320_0 .net *"_s20", 0 0, L_0x2191430; 1 drivers
+v0x218f3c0_0 .net *"_s22", 0 0, C4<1>; 1 drivers
+v0x218f4d0_0 .net *"_s24", 0 0, C4<0>; 1 drivers
+v0x218f570_0 .net *"_s28", 0 0, L_0x2191760; 1 drivers
+v0x218f690_0 .net *"_s30", 0 0, C4<1>; 1 drivers
+v0x218f730_0 .net *"_s32", 0 0, C4<0>; 1 drivers
+v0x218f5f0_0 .net *"_s36", 0 0, L_0x2191b50; 1 drivers
+v0x218f880_0 .net *"_s38", 0 0, C4<1>; 1 drivers
+v0x218f9a0_0 .net *"_s4", 0 0, L_0x2190d90; 1 drivers
+v0x218fa20_0 .net *"_s40", 0 0, C4<0>; 1 drivers
+v0x218f900_0 .net *"_s44", 0 0, L_0x2191da0; 1 drivers
+v0x218fb50_0 .net *"_s46", 0 0, C4<1>; 1 drivers
+v0x218faa0_0 .net *"_s48", 0 0, C4<0>; 1 drivers
+v0x218fc90_0 .net *"_s52", 0 0, L_0x2191cf0; 1 drivers
+v0x218fbf0_0 .net *"_s54", 0 0, L_0x2191bf0; 1 drivers
+v0x218fde0_0 .net *"_s56", 0 0, L_0x21921e0; 1 drivers
+v0x218fd30_0 .net *"_s6", 0 0, C4<1>; 1 drivers
+v0x218ff40_0 .net *"_s60", 0 0, L_0x2192470; 1 drivers
+v0x218fe80_0 .net *"_s62", 0 0, L_0x2192560; 1 drivers
+v0x21900b0_0 .net *"_s64", 0 0, L_0x2192610; 1 drivers
+v0x218ffc0_0 .net *"_s68", 0 0, L_0x21928c0; 1 drivers
+v0x2190230_0 .net *"_s70", 0 0, L_0x2192920; 1 drivers
+v0x2190130_0 .net *"_s72", 0 0, L_0x2192860; 1 drivers
+v0x21903c0_0 .net *"_s8", 0 0, C4<0>; 1 drivers
+v0x21902b0_0 .net "s", 0 0, v0x2190c30_0; 1 drivers
+v0x2190560_0 .net "sign_AeqB", 0 0, L_0x2191970; 1 drivers
+v0x2190440_0 .net "sign_AgtB", 0 0, L_0x2191c50; 1 drivers
+v0x21904e0_0 .net "sign_AltB", 0 0, L_0x2191fe0; 1 drivers
+v0x2190720_0 .net "unsign_AeqB", 0 0, L_0x2190ee0; 1 drivers
+v0x21907a0_0 .net "unsign_AgtB", 0 0, L_0x21912e0; 1 drivers
+v0x21905e0_0 .net "unsign_AltB", 0 0, L_0x2191590; 1 drivers
+L_0x2190d90 .cmp/eq 8, v0x2190680_0, v0x2190b80_0;
+L_0x2190ee0 .functor MUXZ 1, C4<0>, C4<1>, L_0x2190d90, C4<>;
+L_0x2191070 .cmp/gt 8, v0x2190680_0, v0x2190b80_0;
+L_0x21912e0 .functor MUXZ 1, C4<0>, C4<1>, L_0x2191070, C4<>;
+L_0x2191430 .cmp/gt 8, v0x2190b80_0, v0x2190680_0;
+L_0x2191590 .functor MUXZ 1, C4<0>, C4<1>, L_0x2191430, C4<>;
+L_0x2191760 .cmp/eq 8, L_0x218f2a0, L_0x2190ce0;
+L_0x2191970 .functor MUXZ 1, C4<0>, C4<1>, L_0x2191760, C4<>;
+L_0x2191b50 .cmp/gt.s 8, L_0x218f2a0, L_0x2190ce0;
+L_0x2191c50 .functor MUXZ 1, C4<0>, C4<1>, L_0x2191b50, C4<>;
+L_0x2191da0 .cmp/gt.s 8, L_0x2190ce0, L_0x218f2a0;
+L_0x2191fe0 .functor MUXZ 1, C4<0>, C4<1>, L_0x2191da0, C4<>;
+    .scope S_0x2165f80;
+T_0 ;
+    %delay 0, 0;
+    %set/v v0x2190680_0, 0, 8;
+    %set/v v0x2190b80_0, 0, 8;
+    %set/v v0x2190c30_0, 0, 1;
+    %delay 2000, 0;
+    %movi 8, 1, 8;
+    %set/v v0x2190680_0, 8, 8;
+    %set/v v0x2190b80_0, 0, 8;
+    %set/v v0x2190c30_0, 0, 1;
+    %delay 2000, 0;
+    %set/v v0x2190680_0, 0, 8;
+    %movi 8, 16, 8;
+    %set/v v0x2190b80_0, 8, 8;
+    %set/v v0x2190c30_0, 0, 1;
+    %delay 2000, 0;
+    %movi 8, 192, 8;
+    %set/v v0x2190680_0, 8, 8;
+    %movi 8, 64, 8;
+    %set/v v0x2190b80_0, 8, 8;
+    %set/v v0x2190c30_0, 1, 1;
+    %delay 2000, 0;
+    %movi 8, 16, 8;
+    %set/v v0x2190680_0, 8, 8;
+    %movi 8, 128, 8;
+    %set/v v0x2190b80_0, 8, 8;
+    %set/v v0x2190c30_0, 1, 1;
+    %delay 2000, 0;
+    %vpi_call 2 18 "$stop";
+    %end;
+    .thread T_0;
+    .scope S_0x2165f80;
+T_1 ;
+    %vpi_call 2 23 "$monitor", "time=%3d, AeqB=%b, AgtB=%b, AltB=%b, A=%b, B=%b. s=%b", $time, v0x2190970_0, v0x21909f0_0, v0x2190aa0_0, v0x2190680_0, v0x2190b80_0, v0x2190c30_0;
+    %end;
+    .thread T_1;
+    .scope S_0x2165f80;
+T_2 ;
+    %vpi_call 2 28 "$dumpfile", "df_comparator_8b.vcd";
+    %vpi_call 2 29 "$dumpvars";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "df_comparator_8b.v";

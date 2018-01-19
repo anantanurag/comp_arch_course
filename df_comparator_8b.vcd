@@ -1,0 +1,102 @@
+$date
+	Fri Jan 19 17:59:19 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module tb_df_comparator_8b $end
+$var wire 1 ! AeqB $end
+$var wire 1 " AgtB $end
+$var wire 1 # AltB $end
+$var reg 8 $ A [7:0] $end
+$var reg 8 % B [7:0] $end
+$var reg 1 & s $end
+$scope module uut $end
+$var wire 8 ' A [7:0] $end
+$var wire 8 ( A_s [7:0] $end
+$var wire 1 ! AeqB $end
+$var wire 1 " AgtB $end
+$var wire 1 # AltB $end
+$var wire 8 ) B [7:0] $end
+$var wire 8 * B_s [7:0] $end
+$var wire 1 + s $end
+$var wire 1 , sign_AeqB $end
+$var wire 1 - sign_AgtB $end
+$var wire 1 . sign_AltB $end
+$var wire 1 / unsign_AeqB $end
+$var wire 1 0 unsign_AgtB $end
+$var wire 1 1 unsign_AltB $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+01
+00
+1/
+0.
+0-
+1,
+0+
+b0 *
+b0 )
+b0 (
+b0 '
+0&
+b0 %
+b0 $
+0#
+0"
+1!
+$end
+#2000
+0!
+1"
+0,
+1-
+0/
+10
+b1 $
+b1 (
+b1 '
+#4000
+1#
+0"
+1.
+11
+0-
+00
+b10000 %
+b10000 *
+b10000 )
+b0 $
+b0 (
+b0 '
+#6000
+10
+01
+1&
+1+
+b1000000 %
+b1000000 *
+b1000000 )
+b11000000 $
+b11000000 (
+b11000000 '
+#8000
+1"
+0#
+1-
+0.
+00
+11
+b10000000 %
+b10000000 *
+b10000000 )
+b10000 $
+b10000 (
+b10000 '
+#10000

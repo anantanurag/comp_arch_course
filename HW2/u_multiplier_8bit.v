@@ -1,3 +1,51 @@
+`timescale 1ns/10ps
+
+module tb_u_multiplier_8bit();
+wire [15:0] prod;
+wire eop;
+
+reg [7:0] a,b;
+reg clock, reset;
+
+u_multiplier_8bit uut(prod, eop, a, b, clock, reset);
+
+initial
+begin
+	#0 clock = 1'b0;
+	forever #20 clock = ~clock;
+end
+
+initial
+begin
+	#00 a = 8'b0000_0000; b = 8'b0000_0000;
+	#20 a = 8'b0000_0000; b = 8'b0000_0000;
+	#20 a = 8'b1111_1111; b = 8'b1111_1111;
+	#20 a = 8'b1111_0000; b = 8'b0000_1111;
+	#20 a = 8'b1010_1010; b = 8'b0101_0101;
+	#20 a = 8'b1111_0000; b = 8'b0000_1111;
+	#20 $stop;
+end
+
+initial
+begin
+	#00 reset = 1'b0;
+	#90 reset = 1'b1;
+	#95 reset = 1'b0;
+end
+
+initial
+begin
+	$monitor("time=3d, prod=16b, eop=1b, a=8b,b=8b,clock=1b, reset=1b",$time, prod, eop, a, b, clock, reset);
+end
+
+initial
+begin
+	$dumpfile("u_multiplier_8bit.vcd");
+	$dumpvars;
+end
+
+endmodule
+
 module u_multiplier_8bit(prod, eop, a, b, clock, reset);
 
 output reg [15:0] prod;
